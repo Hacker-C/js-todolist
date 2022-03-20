@@ -1,0 +1,39 @@
+#dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(221, 221, 221, 0.5);
+}
+#dialog div {
+  width: 10rem;
+  height: 6.6667rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 10px;
+  text-align: right;
+  /* pointer-events: none; */
+}
+#dialog div span {
+  color: #333;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#dialog div span:hover {
+  color: blue;
+}
+
+#dialog div p {
+  margin-top: 0.3333rem;
+}
+
+.active {
+  display: none;
+}

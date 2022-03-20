@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/dialog.css" />
+  </head>
+  <body>
+    <header>
+      <h3>My TodoList</h3>
+    </header>
+    <main>
+      <!-- 弹窗 -->
+      <div id="dialog" class="active">
+        <div>
+          <span>关闭</span>
+          <p>请输入有效内容！</p>
+        </div>
+      </div>
+
+      <!-- 输入部分 -->
+      <section class="input">
+        <input type="text" id="input" placeholder="请输入待办事件" />
+        <button id="add">添加</button>
+      </section>
+
+      <!-- 待做部分 -->
+      <section class="todo-container">
+        <ul></ul>
+      </section>
+
+      <!-- 已完成 -->
+      <section class="done">已完成</section>
+    </main>
+    <footer>Footer</footer>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

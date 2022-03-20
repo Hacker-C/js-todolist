@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 15px;
+  min-width: 375px;
+}
+input {
+  border: none;
+  outline: none;
+}
+button {
+  border: none;
+}
+li {
+  list-style: none;
+}
+@media screen and (max-width: 375px) {
+  .todo-container ul li > div {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 15px;
+  }
+  .todo-container ul li > div {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 18px;
+  }
+  .todo-container ul li > div {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 20px;
+  }
+  .todo-container ul li > div {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 840px) {
+  html {
+    font-size: 20px;
+  }
+  .todo-container ul li > div {
+    width: 70%;
+  }
+}
+header {
+  height: 3.3333rem;
+  background-color: #45aaf2;
+}
+header h3 {
+  color: #fff;
+  font-size: 1.6667rem;
+  text-align: center;
+  line-height: 3.3333rem;
+}
+
+main {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.input {
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.input input {
+  display: block;
+  height: 2.5rem;
+  width: 70%;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  padding-left: 0.6667rem;
+}
+
+input:focus {
+  border: 0.0333rem solid skyblue;
+}
+
+#add {
+  display: block;
+  height: 2.5rem;
+  width: 20%;
+  margin-left: 0.3333rem;
+  border: none;
+  background-color: #45aaf2;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+#add:active::before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0px;
+  height: 2.5rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 10%);
+}
+
+.todo-container {
+  margin-top: 0.6667rem;
+  padding: 1.3333rem;
+}
+
+.todo-container ul li {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-container ul li > div {
+  height: 2.5rem;
+  border: none;
+  background-color: #e0b887;
+  border-radius: 0.2667rem;
+  box-shadow: 1px 2px 1px #333;
+  margin-top: 0.6667rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-right: 0.5333rem;
+}
+
+.radio {
+  zoom: 1.5;
+  align-self: flex-start;
+}
+
+#content {
+  overflow: hidden; /*超出部分隐藏*/
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+  white-space: nowrap; /*规定段落中的文本不进行换行 */
+  color: #333;
+  font-size: 1.3333rem;
+  line-height: 2.5rem;
+  text-align: left;
+  align-self: flex-start;
+  width: 70%;
+}
+
+#finish::before {
+  display: block;
+  content: '';
+  height: 0.3rem;
+  width: 1rem;
+  background-color: #4cd137;
+  user-select: none;
+  transform: rotate(45deg) translate(0.2rem, -0rem);
+}
+#finish::after {
+  display: block;
+  content: '';
+  height: 0.3rem;
+  width: 1rem;
+  background-color: #4cd137;
+  user-select: none;
+  transform: rotate(-45deg) translate(-0.1rem, -0.1rem);
+}
+
+#del-btn,
+#finish {
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 0.8rem;
+  background-color: gray;
+  cursor: pointer;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+#del-btn::before {
+  display: block;
+  content: '';
+  height: 0.5rem;
+  width: 1rem;
+  background-color: #ed0d00;
+  user-select: none;
+}
