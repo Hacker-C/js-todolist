@@ -43,9 +43,8 @@ function setFinish() {
       btn.onclick = function () {
         let id = this.dataset['id']
         for (let i = 0; i < data.length; i++) {
-          if (data[i].id == id) {
+          if (data[i]?.id == id) {
             data[i].status = 1
-            // item.classList.add('active')
           }
         }
         localStorage.setItem('data', JSON.stringify(data))
@@ -55,8 +54,8 @@ function setFinish() {
   })
 }
 
-// # 设置删除事件
-function setDelete() {
+// # 设置撤销事件
+function setReset() {
   setTimeout(() => {
     let done = ul2.children
     for (let item of done) {
@@ -77,7 +76,28 @@ function setDelete() {
   })
 }
 
+// # 设置删除事件
+function setDelete() {
+  setTimeout(() => {
+    let all = [...ul2.children, ...ul1.children]
+    for (let item of all) {
+      let btn = item.firstElementChild.lastElementChild
+      btn.onclick = function () {
+        let id = this.dataset['id']
+        for (let i = 0; i < data.length; i++) {
+          if (data[i]?.id == id) {
+            delete data[i]
+          }
+        }
+        localStorage.setItem('data', JSON.stringify(data))
+        load(data)
+      }
+    }
+  })
+}
+
 setFinish()
+setReset()
 setDelete()
 
 // 遮罩层
@@ -94,7 +114,7 @@ let liItemModel = function (item) {
     <div>
       <div id="content">${item.content}</div>
       <button id="finish" data-id="${item.id}"></button>
-      <button id="del-btn" ></button>
+      <button id="del-btn" data-id="${item.id}" ></button>
     </div>
 `
 }
@@ -113,17 +133,18 @@ function load(data = []) {
   ul2.innerHTML = ''
   data.forEach((item, index) => {
     let li = document.createElement('li')
-    if (item.status == 0) {
+    if (item?.status == 0) {
       li.innerHTML = liItemModel(item)
       ul1.appendChild(li)
     }
-    if (item.status == 1) {
+    if (item?.status == 1) {
       li.innerHTML = liFinshModel(item)
       ul2.appendChild(li)
     }
   })
   // # 绑定添加事件
   setFinish()
+  setReset()
   setDelete()
 }
 
