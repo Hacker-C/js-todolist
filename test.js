@@ -1,7 +1,6 @@
-let a = [{ b: 1 }, { b: 2 }]
+let a = [{ a: 1 }, { b: 2 }, { c: 3 }, { d: 4 }]
 
-a.forEach((obj) => {
-  if (obj.b === 1) obj.b = 100
-})
+let i = 1
+a.splice(2, 1)
 
 console.log(a)

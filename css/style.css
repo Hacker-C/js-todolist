@@ -197,3 +197,13 @@ input:focus {
   user-select: none;
   transform: rotate(-45deg) translateY(-0.157rem);
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 2rem;
+  width: 100%;
+  color: #666;
+  text-align: center;
+  line-height: 2rem;
+}

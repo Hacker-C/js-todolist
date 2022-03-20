@@ -3,7 +3,6 @@ import getNowTime from './time.js'
 getNowTime.getNowTime()
 
 let data = JSON.parse(localStorage?.getItem('data') ?? '[]')
-console.log(data)
 
 // # 未完成节点
 let input = document.querySelector('#input')
@@ -86,7 +85,7 @@ function setDelete() {
         let id = this.dataset['id']
         for (let i = 0; i < data.length; i++) {
           if (data[i]?.id == id) {
-            delete data[i]
+            data.splice(i, 1)
           }
         }
         localStorage.setItem('data', JSON.stringify(data))
