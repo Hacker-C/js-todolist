@@ -1,0 +1,90 @@
+.active {
+  display: none;
+}
+
+.hd {
+  background-color: #45aaf2;
+  height: 40px;
+}
+.hd h3 {
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+
+.done ul {
+  padding: 1.3333rem;
+}
+
+.finished {
+  height: 2.5rem;
+  padding-right: 0.6667rem;
+  line-height: 2.5rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: #a4b0be;
+  margin-top: 0.6667rem;
+}
+
+.done .content {
+  width: 70%;
+  overflow: hidden; /*超出部分隐藏*/
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+  white-space: nowrap; /*规定段落中的文本不进行换行 */
+  color: #333;
+  font-size: 1.3333rem;
+  line-height: 2.5rem;
+  padding-left: 0.6667rem;
+}
+
+.reset {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 0.8rem;
+  background-color: #808080;
+  align-self: flex-end;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset::before {
+  display: block;
+  content: '';
+  height: 0.4667rem;
+  width: 1rem;
+  background-color: red;
+}
+
+.delete {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 20px;
+  overflow: hidden;
+  align-self: flex-end;
+}
+
+.delete::before {
+  display: block;
+  content: '';
+  height: 0.5rem;
+  width: 1.7rem;
+  background-color: #ed0d00;
+  user-select: none;
+  transform: rotate(45deg) translateY(0.3333rem) translateX(0.2667rem);
+}
+
+.delete::after {
+  display: block;
+  content: '';
+  height: 0.5rem;
+  width: 1.7rem;
+  background-color: #ed0d00;
+  user-select: none;
+  transform: rotate(-45deg) translateY(-0.0667rem);
+}

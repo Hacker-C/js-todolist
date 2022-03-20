@@ -10,10 +10,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/dialog.css" />
+    <link rel="stylesheet" href="./css/meta.css" />
+    <link rel="stylesheet" href="./css/finish.css" />
   </head>
   <body>
     <header>
       <h3>My TodoList</h3>
+      <div class="time">
+        当前时间：
+        <span>00:00:00</span>
+        今日还剩：
+        <span>12h 23m 3s</span>
+      </div>
     </header>
     <main>
       <!-- 弹窗 -->
@@ -36,9 +44,14 @@
       </section>
 
       <!-- 已完成 -->
-      <section class="done">已完成</section>
+      <section class="done">
+        <div class="hd">
+          <h3>Finshed</h3>
+        </div>
+        <ul></ul>
+      </section>
     </main>
     <footer>Footer</footer>
-    <script src="./index.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>

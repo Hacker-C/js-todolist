@@ -17,45 +17,8 @@ button {
 li {
   list-style: none;
 }
-@media screen and (max-width: 375px) {
-  .todo-container ul li > div {
-    width: 90%;
-  }
-}
-@media screen and (min-width: 375px) {
-  html {
-    font-size: 15px;
-  }
-  .todo-container ul li > div {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 414px) {
-  html {
-    font-size: 18px;
-  }
-  .todo-container ul li > div {
-    width: 90%;
-  }
-}
-@media screen and (min-width: 640px) {
-  html {
-    font-size: 20px;
-  }
-  .todo-container ul li > div {
-    width: 80%;
-  }
-}
-@media screen and (min-width: 840px) {
-  html {
-    font-size: 20px;
-  }
-  .todo-container ul li > div {
-    width: 70%;
-  }
-}
+
 header {
-  height: 3.3333rem;
   background-color: #45aaf2;
 }
 header h3 {
@@ -63,6 +26,13 @@ header h3 {
   font-size: 1.6667rem;
   text-align: center;
   line-height: 3.3333rem;
+  height: 3.3333rem;
+}
+
+.time {
+  text-align: center;
+  color: #fff;
+  height: 2rem;
 }
 
 main {
@@ -174,7 +144,6 @@ input:focus {
   transform: rotate(-45deg) translate(-0.1rem, -0.1rem);
 }
 
-#del-btn,
 #finish {
   display: block;
   height: 1.5rem;
@@ -189,11 +158,42 @@ input:focus {
   user-select: none;
 }
 
-#del-btn::before {
+#del-btn {
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  background-color: transparent;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* #del-btn::before {
   display: block;
   content: '';
   height: 0.5rem;
   width: 1rem;
   background-color: #ed0d00;
   user-select: none;
+} */
+#del-btn::before {
+  display: block;
+  content: '';
+  height: 0.5rem;
+  width: 1.7rem;
+  background-color: #ed0d00;
+  user-select: none;
+  transform: rotate(45deg) translateY(0.2333rem) translateX(0.2667rem);
+}
+
+#del-btn::after {
+  display: block;
+  content: '';
+  height: 0.5rem;
+  width: 1.7rem;
+  background-color: #ed0d00;
+  user-select: none;
+  transform: rotate(-45deg) translateY(-0.157rem);
 }
