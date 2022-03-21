@@ -21,12 +21,19 @@ li {
 header {
   background-color: #45aaf2;
 }
+header p {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  font-size: 0.8667rem;
+}
 header h3 {
   color: #fff;
   font-size: 1.6667rem;
   text-align: center;
-  line-height: 3.3333rem;
-  height: 3.3333rem;
+  line-height: 2.6667rem;
+  height: 2.6667rem;
 }
 
 .time {
@@ -85,7 +92,7 @@ input:focus {
 
 .todo-container {
   margin-top: 0.6667rem;
-  padding: 1.3333rem;
+  padding: 0.6667rem;
 }
 
 .todo-container ul li {

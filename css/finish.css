@@ -16,6 +16,10 @@
   padding: 1.3333rem;
 }
 
+.done {
+  margin-top: 0.6667rem;
+}
+
 .finished {
   height: 2.5rem;
   padding-right: 0.6667rem;
