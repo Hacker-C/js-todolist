@@ -4,18 +4,22 @@ export default {
     let leftTime = document.querySelector('.time').children[1]
 
     // 计算当天时间和剩余时间
-    let t1 = setInterval(() => {
-      let now = new Date().toLocaleTimeString()
-      let nowTimeArr = now.split(':')
-      let s = 60 - +nowTimeArr[2]
-      let m = 60 - +nowTimeArr[1] - (s ? 1 : 0)
-      let h = 24 - +nowTimeArr[0] - (m ? 1 : 0)
-      // 剩余时间
-      leftTime.innerHTML = `${h}h ${m < 10 ? '0' + m : m}m ${
-        s < 10 ? '0' + s : s
-      }s`
+    setInterval(() => {
+      let date = new Date()
+
       // 当前时间
-      nowTime.innerHTML = now
+      let nowS = date.getSeconds()
+      let nowM = date.getMinutes()
+      let nowH = date.getHours()
+      // 剩余时间
+      let leftH = 23 - +nowH
+      let leftM = 59 - +nowM
+      let leftS = 59 - +nowS
+      leftTime.innerHTML = leftH + 'h ' + leftM + 'm ' + leftS + 's '
+      nowTime.innerHTML = `
+        ${nowH < 10 ? '0' + nowH : nowH}:${nowM < 10 ? '0' + nowM : nowM}:${
+        nowS < 10 ? '0' + nowS : nowS
+      }`
     }, 1000)
   }
 }
